@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react'
-import {useParams} from 'react-router-dom'
-import axios from 'axios'
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
+import axios from 'axios';
 
 const Posts =  () => {
     const { id } = useParams();
@@ -20,4 +20,4 @@ const Posts =  () => {
     </div>
     );
 }
-export default Posts
+export default Posts;
