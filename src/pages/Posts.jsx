@@ -9,15 +9,15 @@ const Posts =  () => {
    
     useEffect (() => {
         async function fetchPosts() {
-            const { data } = axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+            const { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
             setPosts(data);    
         }
         fetchPosts();
-     },[]);
+     }, []);
     return (
-    <>
-    {posts.map(post => <>{post.id}</>)}
-     </>
+   <div>
+    {posts.map(post => <div>{post.title}</div>)}
+    </div>
     );
 }
-export  default Posts
+export default Posts
